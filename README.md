@@ -1,7 +1,5 @@
 # HDS-F26-Group6-malaga-cpet
 
-# malaga-cpet
-
 HDS-F26 Group 6 — analysis of maximal cardiopulmonary exercise tests (CPET)
 from the University of Málaga.
 
