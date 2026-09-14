@@ -1,7 +1,7 @@
 # HDS-F26-Group6-malaga-cpet
 
 # Project title:
-malaga-cpet
+Malaga Cardiopulmonary Exercise Testing
 
 ## Link to dataset from Physionet:
 https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/
