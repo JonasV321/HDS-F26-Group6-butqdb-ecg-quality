@@ -1,6 +1,7 @@
-# HDS-F26-Group6-treadmill-maximal-test
+# HDS-F26-Group6-malaga-cpet
 
-# Project title
+# Project title:
+malaga-cpet
 
 ## Link to dataset from Physionet:
 https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/
