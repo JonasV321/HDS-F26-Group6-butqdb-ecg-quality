@@ -1,4 +1,4 @@
-# HDS-F26-Group6-malaga-cpet
+# malaga-cpet
 
 HDS-F26 Group 6 — analysis of maximal cardiopulmonary exercise tests (CPET)
 from the University of Málaga.
@@ -60,6 +60,10 @@ https://doi.org/10.1038/s44360-026-00096-z
 992 maximal cardiopulmonary exercise tests from 857 participants, collected
 2008–2018. Ages 10–63, 15% female. ~22 MB uncompressed.
 
+This project contains no WFDB signal records (`.dat`/`.hea`). The `wfdb`
+package is used here as the PhysioNet download client only; both files are
+tabular and are read with pandas.
+
 ### Records used
 
 All 992 tests are in scope at present; no subset has been selected yet.
@@ -74,26 +78,48 @@ Known data issues affecting selection:
 
 ### Downloading the data
 
-Data files are **not** committed to this repository. Download them into a
-local `data/` directory, which is git-ignored.
+Data files are **not** committed to this repository. They are downloaded into
+a local `data/` directory, which is git-ignored.
 
 1. Create a PhysioNet account and accept the Data Use Agreement on the
    project page linked above.
-2. Download by one of:
+
+2. Install the client:
 
 ```bash
-# Option A — whole project via wget
-wget -r -N -c -np https://physionet.org/files/treadmill-exercise-cardioresp/1.0.1/
-
-# Option B — AWS CLI
-aws s3 sync --no-sign-request \
-  s3://physionet-open/treadmill-exercise-cardioresp/1.0.1/ ./data/
-
-# Option C — ZIP archive (6.3 MB) from the project page
+pip install wfdb pandas
 ```
 
-3. Place `subject-info.csv` and `test_measure.csv` in `data/` so paths resolve
-   as `data/subject-info.csv` and `data/test_measure.csv`.
+3. Download both files:
+
+```python
+import wfdb
+
+wfdb.dl_files(
+    db="treadmill-exercise-cardioresp/1.0.1",
+    dl_dir="data",
+    files=["subject-info.csv", "test_measure.csv"],
+)
+```
+
+   Alternatives, if `wfdb` is unavailable:
+
+```bash
+wget -r -N -c -np https://physionet.org/files/treadmill-exercise-cardioresp/1.0.1/
+
+aws s3 sync --no-sign-request \
+  s3://physionet-open/treadmill-exercise-cardioresp/1.0.1/ ./data/
+```
+
+   Or the 6.3 MB ZIP archive from the project page.
+
+4. Load:
+
+```python
+import pandas as pd
+
+subjects = pd.read_csv("data/subject-info.csv")
+measures = pd.read_csv("data/test_measure.csv")
+```
 
 Expected layout:
-Repository created in Lecture 1.
