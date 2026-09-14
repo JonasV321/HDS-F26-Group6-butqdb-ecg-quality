@@ -4,7 +4,7 @@
 ## Link to dataset from Physionet:
 
 ## Group members
-- Name
+- Andreas Sundstrøm Pedersen
 - Name
 - Name
 
