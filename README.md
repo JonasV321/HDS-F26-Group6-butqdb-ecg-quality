@@ -1,15 +1,17 @@
-# HDS-F26-Group6-ProjectName
+# HDS-F26-Group6-treadmill-maximal-test
+
 # Project title
 
 ## Link to dataset from Physionet:
+https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/
 
 ## Group members
 - Andreas Sundstrøm Pedersen
-- Name
-- Name
+- Jonas Visby Jensen
+- Jonas Corluy
 
 ## Project topic
-To be decided
+Malaga treadmill maximal exercise tests (2021)
 
 ## Dataset
 To be decided
