@@ -19,6 +19,7 @@ Repository created in Lecture 1. Analysis scope not yet decided.
 Human Performance Lab of the University of Malaga
 
 **PhysioNet URL:** https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/
+NEW: https://physionet.org/content/butqdb/1.0.0/
 
 **Database slug:** `treadmill-exercise-cardioresp`
 
