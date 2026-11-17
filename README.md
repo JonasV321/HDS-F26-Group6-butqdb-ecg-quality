@@ -11,10 +11,16 @@ HDS-F26 Group 6 — analysis of ECG signal quality in long-term wearable recordi
 ## Project status
 
 Repository created in Lecture 1. Dataset changed from the Málaga treadmill CPET dataset to BUT QDB. Analysis scope not yet decided.
-Scope has been decided to be:   Create a model that can group ECG signal windows into good quality(Easily useable Q1 or Q2 annotation) and poor quality(not or barely useable data Q3 annotation)
-                                Compare our models predictions with the quality annotations from the dataset
-                                Filter or discard/annotate poor data.
-                                Demonstrate the use of the resulting data
+
+Scope has been decided to be based on the research question: How strongly is movement correlated to poor quality of data, and can it be used in adition to the ecg data to effectively assign quality labels to the data. 
+
+Create a model that can group ECG signal windows into good quality(Easily useable Q1 or Q2 annotation) and poor quality(not or barely useable data Q3 annotation)
+Compare our models predictions with the quality annotations from the dataset
+Filter or discard/annotate poor data.
+Demonstrate the use of the resulting data
+
+
+workflow: Check data -> Train model based on ECG signal and annotations  -> test this model -> check if acc is correlated with poor quality -> train model on ECG signal, acc signal and annotations -> compare models
 
 ## Dataset
 
